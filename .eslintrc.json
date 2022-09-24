@@ -1,40 +1,35 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier"
-    ],
-    "overrides": [
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "react-native"
-    ],
-    "rules": {
-        // 0 -> off, 1 -> warn, 2 -> error
-        "react-native/no-unused-styles": 2,
-        "react-native/split-platform-components": 2,
-        "react-native/no-inline-styles": 2,
-        "react-native/no-color-literals": 2,
-        "react-native/no-raw-text": 2,
-        "react-native/no-single-element-style-arrays": 2,
-        "no-unused-vars": 0,
-        "@typescript-eslint/no-unused-vars": 2,
-        "no-use-before-define": 0,
-        "@typescript-eslint/no-use-before-define": 2
-    }
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "react-native"],
+  "rules": {
+    // 0 -> off, 1 -> warn, 2 -> error
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 1,
+    "react-native/no-raw-text": 2,
+    "react-native/no-single-element-style-arrays": 2,
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": 2
+  }
 }

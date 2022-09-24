@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   buttonsRow: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: 10,
+    marginVertical: 10,
   },
   iconButton: {
     flexDirection: 'row',

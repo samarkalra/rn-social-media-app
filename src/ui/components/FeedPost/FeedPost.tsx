@@ -8,12 +8,12 @@ import {
   ViewStyle,
 } from 'react-native';
 import React from 'react';
-import { Post } from '../../../App';
-import LikeImage from '../../assets/images/like.png';
-import LikeIcon from '../../assets/images/like-button.png';
-import CommentIcon from '../../assets/images/comment.png';
-import ShareIcon from '../../assets/images/share.png';
+import LikeImage from '../../../assets/images/like.png';
+import LikeIcon from '../../../assets/images/like-button.png';
+import CommentIcon from '../../../assets/images/comment.png';
+import ShareIcon from '../../../assets/images/share.png';
 import styles from './style';
+import { Post } from './type';
 
 type FeedPostProps = {
   post: Post;

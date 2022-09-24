@@ -9,6 +9,10 @@ const AppStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.white,
   },
+  grayScreen: {
+    flex: 1,
+    backgroundColor: COLORS.lightGray,
+  },
 });
 
 export default AppStyles;

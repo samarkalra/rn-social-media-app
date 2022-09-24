@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import LikeImage from './assets/images/like.png';
+import COLORS from './constants/colors';
+import AppStyles from './constants/styles';
 
 const AVATAR_SIZE = 40;
 const LIKE_ICON_SIZE = 20;
@@ -31,8 +33,7 @@ const post = {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#FFFFFF' },
-  post: { width: '100%', marginVertical: 10, backgroundColor: '#FFFFFF' },
+  post: { width: '100%', marginVertical: 10, backgroundColor: COLORS.white },
   header: {
     flexDirection: 'row',
     padding: 10,
@@ -43,8 +44,8 @@ const styles = StyleSheet.create({
     borderRadius: AVATAR_SIZE / 2,
   },
   userNameAndTime: { justifyContent: 'center', marginLeft: 12 },
-  name: { fontWeight: '500', color: '#000000' },
-  createTime: { color: '#000000' },
+  name: { fontWeight: '500', color: COLORS.black },
+  createTime: { color: COLORS.black },
   dotsIcon: {
     fontSize: 32,
     fontWeight: 'bold',
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   },
   body: {},
   bodyText: {
-    color: '#000000',
+    color: COLORS.black,
     paddingHorizontal: 10,
     lineHeight: 20,
   },
@@ -63,11 +64,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     flexDirection: 'row',
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: 'lightgray',
+    borderColor: COLORS.lightGray,
   },
   likeIcon: { width: LIKE_ICON_SIZE, height: LIKE_ICON_SIZE },
-  likedBy: { marginLeft: 5, color: 'gray' },
-  noOfShares: { marginLeft: 'auto', color: 'gray' },
+  likedBy: { marginLeft: 5, color: COLORS.gray },
+  noOfShares: { marginLeft: 'auto', color: COLORS.gray },
   buttonsRow: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  iconButtonText: { color: 'gray', marginLeft: 5, fontWeight: '500' },
+  iconButtonText: { color: COLORS.gray, marginLeft: 5, fontWeight: '500' },
 });
 
 const pressableStyles: (
@@ -91,7 +92,7 @@ const pressableStyles: (
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <View style={AppStyles.whiteScreen}>
       {/* Post Component */}
       <View style={styles.post}>
         {/* Header */}

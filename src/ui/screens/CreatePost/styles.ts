@@ -2,6 +2,8 @@ import { StyleSheet } from 'react-native';
 import COLORS from '../../../constants/colors';
 import { AVATAR_SIZE } from '../../components/FeedPost/style';
 
+export const IMAGE_PICKER_ICON_SIZE = 30;
+
 const styles = StyleSheet.create({
   screen: { padding: 10 },
   header: {
@@ -17,8 +19,9 @@ const styles = StyleSheet.create({
   buttonView: { marginTop: 'auto' },
   imagePicker: { marginLeft: 'auto' },
   imagePickerIcon: {
-    width: 30,
-    height: 30,
+    width: IMAGE_PICKER_ICON_SIZE,
+    height: IMAGE_PICKER_ICON_SIZE,
+    tintColor: COLORS.green,
   },
   selectedImage: {
     width: '50%',

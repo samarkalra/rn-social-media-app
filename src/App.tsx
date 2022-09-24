@@ -9,8 +9,10 @@ import {
   ViewStyle,
 } from 'react-native';
 import React from 'react';
+import LikeImage from './assets/images/like.png';
 
 const AVATAR_SIZE = 40;
+const LIKE_ICON_SIZE = 20;
 
 const post = {
   id: 'p1',
@@ -56,7 +58,26 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   bodyImage: { width: '100%', aspectRatio: 1, marginTop: 10 },
-  footer: {},
+  footer: { paddingHorizontal: 10 },
+  statsRow: {
+    paddingVertical: 10,
+    flexDirection: 'row',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: 'lightgray',
+  },
+  likeIcon: { width: LIKE_ICON_SIZE, height: LIKE_ICON_SIZE },
+  likedBy: { marginLeft: 5, color: 'gray' },
+  noOfShares: { marginLeft: 'auto', color: 'gray' },
+  buttonsRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    marginTop: 10,
+  },
+  iconButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  iconButtonText: { color: 'gray', marginLeft: 5, fontWeight: '500' },
 });
 
 const pressableStyles: (
@@ -103,7 +124,30 @@ const App = () => {
         </View>
 
         {/* Footer */}
-        <View style={styles.footer}></View>
+        <View style={styles.footer}>
+          <View style={styles.statsRow}>
+            <Image source={LikeImage} style={styles.likeIcon} />
+            <Text style={styles.likedBy}>
+              Elon Musk and {post.numberOfLikes} others
+            </Text>
+            <Text style={styles.noOfShares}>{post.numberOfShares} shares</Text>
+          </View>
+
+          <View style={styles.buttonsRow}>
+            <Pressable android_ripple={{ borderless: true }}>
+              <Text style={styles.iconButtonText}>Like</Text>
+            </Pressable>
+            <Pressable android_ripple={{ borderless: true }}>
+              <Text style={styles.iconButtonText}>Comment</Text>
+            </Pressable>
+            <Pressable
+              android_ripple={{ borderless: true }}
+              style={styles.iconButton}
+            >
+              <Text style={styles.iconButtonText}>Share</Text>
+            </Pressable>
+          </View>
+        </View>
       </View>
     </View>
   );

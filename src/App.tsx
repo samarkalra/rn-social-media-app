@@ -29,7 +29,7 @@ const post = {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
+  container: { flex: 1, backgroundColor: '#FFFFFF' },
   post: { width: '100%', marginVertical: 10, backgroundColor: '#FFFFFF' },
   header: {
     flexDirection: 'row',
@@ -50,6 +50,12 @@ const styles = StyleSheet.create({
     marginTop: -8,
   },
   body: {},
+  bodyText: {
+    color: '#000000',
+    paddingHorizontal: 10,
+    lineHeight: 20,
+  },
+  bodyImage: { width: '100%', aspectRatio: 1, marginTop: 10 },
   footer: {},
 });
 
@@ -87,7 +93,14 @@ const App = () => {
         </View>
 
         {/* Body */}
-        <View style={styles.body}></View>
+        <View style={styles.body}>
+          <Text style={styles.bodyText}>{post.description}</Text>
+          <Image
+            source={{ uri: post.image }}
+            resizeMode="cover"
+            style={styles.bodyImage}
+          />
+        </View>
 
         {/* Footer */}
         <View style={styles.footer}></View>

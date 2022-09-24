@@ -10,11 +10,15 @@ import {
 } from 'react-native';
 import React from 'react';
 import LikeImage from './assets/images/like.png';
+import LikeIcon from './assets/images/like-button.png';
+import CommentIcon from './assets/images/comment.png';
+import ShareIcon from './assets/images/share.png';
 import COLORS from './constants/colors';
 import AppStyles from './constants/styles';
 
 const AVATAR_SIZE = 40;
 const LIKE_ICON_SIZE = 20;
+const FOOTER_BUTTON_ICON_SIZE = 16;
 
 const post = {
   id: 'p1',
@@ -71,14 +75,19 @@ const styles = StyleSheet.create({
   noOfShares: { marginLeft: 'auto', color: COLORS.gray },
   buttonsRow: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
     marginTop: 10,
   },
   iconButton: {
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  iconButtonText: { color: COLORS.gray, marginLeft: 5, fontWeight: '500' },
+  iconButtonText: {
+    color: COLORS.gray,
+    marginLeft: 5,
+    fontWeight: '500',
+  },
 });
 
 const pressableStyles: (
@@ -135,16 +144,43 @@ const App = () => {
           </View>
 
           <View style={styles.buttonsRow}>
-            <Pressable android_ripple={{ borderless: true }}>
+            <Pressable
+              android_ripple={{ borderless: true }}
+              style={styles.iconButton}
+            >
+              <Image
+                source={LikeIcon}
+                style={{
+                  width: FOOTER_BUTTON_ICON_SIZE,
+                  height: FOOTER_BUTTON_ICON_SIZE,
+                }}
+              />
               <Text style={styles.iconButtonText}>Like</Text>
             </Pressable>
-            <Pressable android_ripple={{ borderless: true }}>
+            <Pressable
+              android_ripple={{ borderless: true }}
+              style={styles.iconButton}
+            >
+              <Image
+                source={CommentIcon}
+                style={{
+                  width: FOOTER_BUTTON_ICON_SIZE,
+                  height: FOOTER_BUTTON_ICON_SIZE,
+                }}
+              />
               <Text style={styles.iconButtonText}>Comment</Text>
             </Pressable>
             <Pressable
               android_ripple={{ borderless: true }}
               style={styles.iconButton}
             >
+              <Image
+                source={ShareIcon}
+                style={{
+                  width: FOOTER_BUTTON_ICON_SIZE,
+                  height: FOOTER_BUTTON_ICON_SIZE,
+                }}
+              />
               <Text style={styles.iconButtonText}>Share</Text>
             </Pressable>
           </View>

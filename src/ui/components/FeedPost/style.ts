@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import COLORS from '../../../constants/colors';
 
-const AVATAR_SIZE = 40;
+export const AVATAR_SIZE = 40;
 const LIKE_ICON_SIZE = 20;
 const FOOTER_BUTTON_ICON_SIZE = 16;
 

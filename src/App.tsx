@@ -1,12 +1,12 @@
 import { View } from 'react-native';
 import React from 'react';
 import AppStyles from './constants/styles';
-import CreatePostScreen from './ui/screens/CreatePost/CreatePostScreen';
+import AppNavigator from './core/navigation/AppNavigator';
 
 const App = () => {
   return (
     <View style={AppStyles.grayScreen}>
-      <CreatePostScreen />
+      <AppNavigator />
     </View>
   );
 };
